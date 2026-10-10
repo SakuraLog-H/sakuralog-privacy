@@ -279,7 +279,7 @@
       <span class="logo-name">SakuraLog</span>
     </div>
     <h1>Privacy Policy</h1>
-    <span class="updated">Last updated: June 2026</span>
+    <span class="updated">Last updated: October 2026</span>
   </header>
 
   <main>
@@ -288,9 +288,10 @@
     <div class="summary">
       <div class="summary-title">The short version</div>
       <ul>
-        <li>We only collect what's needed to run the app (your email, watchlist, and profile).</li>
+        <li>We only collect what's needed to run the app (your email, watchlist, and profile), plus basic advertising measurement data described below.</li>
         <li>We never sell your data. Ever.</li>
-        <li>We never share your data with advertisers.</li>
+        <li>We never share your email, watchlist, or profile with advertisers.</li>
+        <li>If you allow tracking, your device's advertising ID and basic app events (like installing the app or creating an account) are shared with Meta so we can measure our ads. You can turn this off at any time.</li>
         <li>You can delete your account and all data at any time from inside the app.</li>
         <li>The full details are below.</li>
       </ul>
@@ -304,30 +305,32 @@
 
     <section>
       <h2><span class="num">02</span>What We Collect</h2>
-      <p>We collect only what's necessary to provide the service.</p>
+      <p>We collect only what's necessary to provide the service and to measure our advertising.</p>
       <ul class="standard">
         <li><strong>Account information</strong> — your email address and optional username, provided when you sign up.</li>
         <li><strong>Watchlist data</strong> — the anime you add to your list, their statuses, episode progress, ratings, and rewatch counts.</li>
         <li><strong>Profile picture</strong> — if you choose to upload one.</li>
         <li><strong>Notification preferences</strong> — which anime you've set notifications for.</li>
         <li><strong>Feedback submissions</strong> — if you submit feedback through the app.</li>
+        <li><strong>Advertising identifier and app events</strong> — on iPhone, if you allow tracking when the app asks, and on Android, unless you have turned off or deleted your advertising ID, the app collects your device's advertising identifier and basic app events: app installs and opens, creating an account, and adding your first anime to your list. These events do not contain your email address, name, or the contents of your watchlist. Meta's software in the app may also receive standard device details such as device model, operating system version, language, time zone, and IP address.</li>
       </ul>
       <div class="highlight-box">
-        <p>We do <strong>not</strong> collect location data, contacts, browsing history, device identifiers, or any data beyond what is listed above.</p>
+        <p>We do <strong>not</strong> collect location data, contacts, or browsing history. Apart from the advertising identifier and app events described above, we do not collect device identifiers or any data beyond what is listed above.</p>
       </div>
     </section>
 
     <section>
       <h2><span class="num">03</span>How We Use Your Data</h2>
-      <p>Your data is used solely to operate and improve SakuraLog:</p>
+      <p>Your data is used to operate and improve SakuraLog and to measure our advertising:</p>
       <ul class="standard">
         <li>To sync your watchlist across your devices.</li>
         <li>To send episode airing notifications you explicitly opt into.</li>
         <li>To generate your profile stats and genre chart.</li>
         <li>To respond to feedback you submit.</li>
         <li>To improve the app based on general, anonymized usage patterns.</li>
+        <li>To measure which of our ads lead to installs and sign-ups, using the advertising identifier and app events described above.</li>
       </ul>
-      <p>We do not use your data for advertising, profiling, or any purpose beyond running the app.</p>
+      <p>We never use your email address, watchlist, or profile content for advertising or profiling.</p>
     </section>
 
     <section>
@@ -335,11 +338,12 @@
       <p>SakuraLog uses the following third-party services to function:</p>
       <ul class="standard">
         <li><strong>Supabase</strong> — our database and authentication provider. Your account data and watchlist are stored on Supabase servers. Supabase is SOC 2 compliant. See their privacy policy at <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</li>
+        <li><strong>Meta (Facebook) SDK</strong> — used to measure the performance of our ads on Facebook and Instagram. Meta receives your device's advertising identifier and the basic app events described in Section 02, and may use this data to measure ads and to improve ad targeting, in line with its own privacy policy at <a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy/policy</a>.</li>
         <li><strong>AniList</strong> — we query AniList's public API to fetch anime data (titles, covers, scores, schedules). We do not send any of your personal data to AniList.</li>
         <li><strong>YouTube Data API</strong> — used to show anime trailers in the app. No personal data is sent to YouTube.</li>
         <li><strong>Jikan / MyAnimeList</strong> — used for news and library import. No personal data is sent.</li>
       </ul>
-      <p>We do not use Google Analytics, Facebook Pixel, or any advertising or tracking SDKs.</p>
+      <p>We do not use Google Analytics or Facebook Pixel. The Meta SDK is the only advertising-related software in the app, and we use it only to measure our own ads.</p>
     </section>
 
     <section>
@@ -349,12 +353,14 @@
         <li>As required by law, court order, or government authority.</li>
         <li>To protect the safety of our users or the public.</li>
         <li>With Supabase, solely as a data processor to operate the service (covered under their data processing agreement).</li>
+        <li>With Meta, limited to your device's advertising identifier and the basic app events described in Section 02, for advertising measurement. This sharing only takes place if you have allowed tracking on iPhone, or have not turned off your advertising ID on Android.</li>
       </ul>
     </section>
 
     <section>
       <h2><span class="num">06</span>Data Retention</h2>
       <p>We retain your data for as long as you have an active account. When you delete your account, all associated data — your watchlist, profile, notifications, and auth credentials — is permanently deleted from our systems immediately. There is no recovery period.</p>
+      <p>Advertising identifiers and app events that have already been sent to Meta are handled under Meta's own retention practices and are not stored in your SakuraLog account.</p>
     </section>
 
     <section>
@@ -365,6 +371,7 @@
         <li><strong>Correction</strong> — you can update your username, email, and profile at any time from Account Settings.</li>
         <li><strong>Deletion</strong> — you can permanently delete your account and all data from Profile → Account Settings → Delete Account. This is immediate and irreversible.</li>
         <li><strong>Export</strong> — contact us at <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a> to request a copy of your data.</li>
+        <li><strong>Control over tracking</strong> — on iPhone, you can allow or deny tracking when the app asks, and change your choice at any time in your device's Settings under Privacy &amp; Security → Tracking. On Android, you can reset or delete your advertising ID in your device's Settings under Privacy → Ads.</li>
       </ul>
     </section>
 
