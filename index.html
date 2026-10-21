@@ -1,292 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — SakuraLog</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --pink: #ff6b9d;
-      --purple: #6c63ff;
-      --navy: #0f0f1a;
-      --card: #1a1a2e;
-      --border: #2a2a3e;
-      --text: #e8e0ee;
-      --sub: #888899;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      background: var(--navy);
-      color: var(--text);
-      line-height: 1.75;
-      font-size: 15px;
-    }
-
-    /* Subtle background glow */
-    body::before {
-      content: '';
-      position: fixed;
-      top: -200px;
-      left: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, #ff6b9d12 0%, transparent 65%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Header */
-    header {
-      position: relative;
-      z-index: 1;
-      padding: 48px 24px 36px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 28px;
-      text-decoration: none;
-    }
-
-    .logo-dot {
-      width: 28px;
-      height: 28px;
-      background: var(--pink);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
-
-    .logo-name {
-      color: var(--pink);
-      font-family: 'DM Serif Display', serif;
-      font-size: 22px;
-      letter-spacing: -0.3px;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 400;
-      letter-spacing: -1px;
-      color: #fff;
-      margin-bottom: 12px;
-      line-height: 1.15;
-    }
-
-    .updated {
-      color: var(--sub);
-      font-size: 13px;
-      font-weight: 500;
-      background: var(--card);
-      border: 1px solid var(--border);
-      display: inline-block;
-      padding: 5px 14px;
-      border-radius: 100px;
-      margin-top: 8px;
-    }
-
-    /* Main content */
-    main {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-
-    /* Quick summary box */
-    .summary {
-      background: linear-gradient(135deg, #ff6b9d18, #6c63ff10);
-      border: 1px solid #ff6b9d30;
-      border-radius: 16px;
-      padding: 24px 28px;
-      margin-bottom: 48px;
-    }
-
-    .summary-title {
-      color: var(--pink);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .summary ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .summary ul li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .summary ul li::before {
-      content: '✓';
-      color: #1db954;
-      font-weight: 900;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 44px;
-    }
-
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.3px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    h2 .num {
-      color: var(--pink);
-      font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-      display: block;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-
-    p {
-      color: #b8b0c8;
-      margin-bottom: 14px;
-      font-weight: 400;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    ul.standard {
-      list-style: none;
-      padding: 0;
-      margin: 14px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    ul.standard li {
-      color: #b8b0c8;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    ul.standard li::before {
-      content: '–';
-      position: absolute;
-      left: 0;
-      color: var(--pink);
-      font-weight: 700;
-    }
-
-    .highlight-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin: 16px 0;
-    }
-
-    .highlight-box p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    a {
-      color: var(--pink);
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid #ff6b9d44;
-      transition: border-color 0.2s;
-    }
-
-    a:hover { border-color: var(--pink); }
-
-    /* Footer */
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 32px 24px 48px;
-      border-top: 1px solid var(--border);
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    footer .brand {
-      color: var(--pink);
-      font-family: 'DM Serif Display', serif;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    footer .slogan {
-      color: var(--sub);
-      font-size: 13px;
-    }
-
-    /* Divider line across full width */
-    .full-border-top {
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 600px) {
-      header, main, footer { padding-left: 20px; padding-right: 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | SakuraLog</title>
+<style>
+  :root { --bg:#fbf8f6; --text:#1d1a1b; --sub:#6b6366; --rule:#e4dcd9; --accent:#c4405f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141213; --text:#ece6e8; --sub:#a39a9e; --rule:#2e2a2b; --accent:#ee7f9a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 Georgia, "Times New Roman", serif; }
+  header, main, footer { max-width:640px; margin:0 auto; padding-left:20px; padding-right:20px; }
+  header { padding-top:56px; }
+  main { padding-bottom:64px; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 6px; }
+  h2 { font-size:1.1rem; margin:40px 0 8px; padding-top:20px; border-top:1px solid var(--rule); }
+  .summary h2 { margin-top:24px; }
+  p, li { margin:0 0 12px; }
+  ul { padding-left:20px; }
+  .meta { color:var(--sub); font-size:.9rem; }
+  a { color:var(--accent); }
+  footer { color:var(--sub); font-size:.9rem; padding-bottom:56px; border-top:1px solid var(--rule); padding-top:20px; }
+</style>
 </head>
 <body>
-
-  <div class="full-border-top" style="margin-bottom: 0;"></div>
-
-  <header>
-    <div class="logo">
-      <div class="logo-dot">🌸</div>
-      <span class="logo-name">SakuraLog</span>
-    </div>
-    <h1>Privacy Policy</h1>
-    <span class="updated">Last updated: October 2026</span>
-  </header>
-
-  <main>
+<header>
+  <h1>SakuraLog Privacy Policy</h1>
+  <p class="meta">Last updated: October 2026</p>
+</header>
+<main>
 
     <!-- TL;DR summary -->
     <div class="summary">
-      <div class="summary-title">The short version</div>
+      <h2>The short version</h2>
       <ul>
         <li>We only collect what's needed to run the app (your email, watchlist, and profile), plus basic advertising measurement data described below.</li>
         <li>We never sell your data. Ever.</li>
@@ -298,21 +43,21 @@
     </div>
 
     <section>
-      <h2><span class="num">01</span>Who We Are</h2>
+      <h2>1. Who We Are</h2>
       <p>SakuraLog is an anime tracking app built independently. When we say "we," "us," or "our," we mean SakuraLog and its developer. When we say "you," we mean anyone who uses the SakuraLog app.</p>
       <p>If you have questions about this policy, contact us at: <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a></p>
     </section>
 
     <section>
-      <h2><span class="num">02</span>What We Collect</h2>
+      <h2>2. What We Collect</h2>
       <p>We collect only what's necessary to provide the service and to measure our advertising.</p>
-      <ul class="standard">
-        <li><strong>Account information</strong> — your email address and optional username, provided when you sign up.</li>
-        <li><strong>Watchlist data</strong> — the anime you add to your list, their statuses, episode progress, ratings, and rewatch counts.</li>
-        <li><strong>Profile picture</strong> — if you choose to upload one.</li>
-        <li><strong>Notification preferences</strong> — which anime you've set notifications for.</li>
-        <li><strong>Feedback submissions</strong> — if you submit feedback through the app.</li>
-        <li><strong>Advertising identifier and app events</strong> — on iPhone, if you allow tracking when the app asks, and on Android, unless you have turned off or deleted your advertising ID, the app collects your device's advertising identifier and basic app events: app installs and opens, creating an account, and adding your first anime to your list. These events do not contain your email address, name, or the contents of your watchlist. Meta's software in the app may also receive standard device details such as device model, operating system version, language, time zone, and IP address.</li>
+      <ul>
+        <li><strong>Account information</strong>: your email address and optional username, provided when you sign up.</li>
+        <li><strong>Watchlist data</strong>: the anime you add to your list, their statuses, episode progress, ratings, and rewatch counts.</li>
+        <li><strong>Profile picture</strong>: if you choose to upload one.</li>
+        <li><strong>Notification preferences</strong>: which anime you've set notifications for.</li>
+        <li><strong>Feedback submissions</strong>: if you submit feedback through the app.</li>
+        <li><strong>Advertising identifier and app events</strong>: on iPhone, if you allow tracking when the app asks, and on Android, unless you have turned off or deleted your advertising ID, the app collects your device's advertising identifier and basic app events: app installs and opens, creating an account, and adding your first anime to your list. These events do not contain your email address, name, or the contents of your watchlist. Meta's software in the app may also receive standard device details such as device model, operating system version, language, time zone, and IP address.</li>
       </ul>
       <div class="highlight-box">
         <p>We do <strong>not</strong> collect location data, contacts, or browsing history. Apart from the advertising identifier and app events described above, we do not collect device identifiers or any data beyond what is listed above.</p>
@@ -320,9 +65,9 @@
     </section>
 
     <section>
-      <h2><span class="num">03</span>How We Use Your Data</h2>
+      <h2>3. How We Use Your Data</h2>
       <p>Your data is used to operate and improve SakuraLog and to measure our advertising:</p>
-      <ul class="standard">
+      <ul>
         <li>To sync your watchlist across your devices.</li>
         <li>To send episode airing notifications you explicitly opt into.</li>
         <li>To generate your profile stats and genre chart.</li>
@@ -334,22 +79,22 @@
     </section>
 
     <section>
-      <h2><span class="num">04</span>Third-Party Services</h2>
+      <h2>4. Third-Party Services</h2>
       <p>SakuraLog uses the following third-party services to function:</p>
-      <ul class="standard">
-        <li><strong>Supabase</strong> — our database and authentication provider. Your account data and watchlist are stored on Supabase servers. Supabase is SOC 2 compliant. See their privacy policy at <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</li>
-        <li><strong>Meta (Facebook) SDK</strong> — used to measure the performance of our ads on Facebook and Instagram. Meta receives your device's advertising identifier and the basic app events described in Section 02, and may use this data to measure ads and to improve ad targeting, in line with its own privacy policy at <a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy/policy</a>.</li>
-        <li><strong>AniList</strong> — we query AniList's public API to fetch anime data (titles, covers, scores, schedules). We do not send any of your personal data to AniList.</li>
-        <li><strong>YouTube Data API</strong> — used to show anime trailers in the app. No personal data is sent to YouTube.</li>
-        <li><strong>Jikan / MyAnimeList</strong> — used for news and library import. No personal data is sent.</li>
+      <ul>
+        <li><strong>Supabase</strong>: our database and authentication provider. Your account data and watchlist are stored on Supabase servers. Supabase is SOC 2 compliant. See their privacy policy at <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</li>
+        <li><strong>Meta (Facebook) SDK</strong>: used to measure the performance of our ads on Facebook and Instagram. Meta receives your device's advertising identifier and the basic app events described in Section 02, and may use this data to measure ads and to improve ad targeting, in line with its own privacy policy at <a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy/policy</a>.</li>
+        <li><strong>AniList</strong>: we query AniList's public API to fetch anime data (titles, covers, scores, schedules). We do not send any of your personal data to AniList.</li>
+        <li><strong>YouTube Data API</strong>: used to show anime trailers in the app. No personal data is sent to YouTube.</li>
+        <li><strong>Jikan / MyAnimeList</strong>: used for news and library import. No personal data is sent.</li>
       </ul>
       <p>We do not use Google Analytics or Facebook Pixel. The Meta SDK is the only advertising-related software in the app, and we use it only to measure our own ads.</p>
     </section>
 
     <section>
-      <h2><span class="num">05</span>Data Sharing</h2>
+      <h2>5. Data Sharing</h2>
       <p>We do not sell, rent, or share your personal data with any third party, except:</p>
-      <ul class="standard">
+      <ul>
         <li>As required by law, court order, or government authority.</li>
         <li>To protect the safety of our users or the public.</li>
         <li>With Supabase, solely as a data processor to operate the service (covered under their data processing agreement).</li>
@@ -358,55 +103,50 @@
     </section>
 
     <section>
-      <h2><span class="num">06</span>Data Retention</h2>
-      <p>We retain your data for as long as you have an active account. When you delete your account, all associated data — your watchlist, profile, notifications, and auth credentials — is permanently deleted from our systems immediately. There is no recovery period.</p>
+      <h2>6. Data Retention</h2>
+      <p>We retain your data for as long as you have an active account. When you delete your account, all associated data (your watchlist, profile, notifications, and auth credentials) is permanently deleted from our systems immediately. There is no recovery period.</p>
       <p>Advertising identifiers and app events that have already been sent to Meta are handled under Meta's own retention practices and are not stored in your SakuraLog account.</p>
     </section>
 
     <section>
-      <h2><span class="num">07</span>Your Rights</h2>
+      <h2>7. Your Rights</h2>
       <p>You have full control over your data:</p>
-      <ul class="standard">
-        <li><strong>Access</strong> — your watchlist and profile data is visible to you in the app at all times.</li>
-        <li><strong>Correction</strong> — you can update your username, email, and profile at any time from Account Settings.</li>
-        <li><strong>Deletion</strong> — you can permanently delete your account and all data from Profile → Account Settings → Delete Account. This is immediate and irreversible.</li>
-        <li><strong>Export</strong> — contact us at <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a> to request a copy of your data.</li>
-        <li><strong>Control over tracking</strong> — on iPhone, you can allow or deny tracking when the app asks, and change your choice at any time in your device's Settings under Privacy &amp; Security → Tracking. On Android, you can reset or delete your advertising ID in your device's Settings under Privacy → Ads.</li>
+      <ul>
+        <li><strong>Access</strong>: your watchlist and profile data is visible to you in the app at all times.</li>
+        <li><strong>Correction</strong>: you can update your username, email, and profile at any time from Account Settings.</li>
+        <li><strong>Deletion</strong>: you can permanently delete your account and all data from Profile → Account Settings → Delete Account. This is immediate and irreversible.</li>
+        <li><strong>Export</strong>: contact us at <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a> to request a copy of your data.</li>
+        <li><strong>Control over tracking</strong>: on iPhone, you can allow or deny tracking when the app asks, and change your choice at any time in your device's Settings under Privacy &amp; Security → Tracking. On Android, you can reset or delete your advertising ID in your device's Settings under Privacy → Ads.</li>
       </ul>
     </section>
 
     <section>
-      <h2><span class="num">08</span>Children's Privacy</h2>
+      <h2>8. Children's Privacy</h2>
       <p>SakuraLog is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal data, please contact us and we will delete it promptly.</p>
     </section>
 
     <section>
-      <h2><span class="num">09</span>Security</h2>
+      <h2>9. Security</h2>
       <p>We take reasonable measures to protect your data. Your account is secured with email and password authentication managed by Supabase, which uses industry-standard encryption. Passwords are never stored in plain text.</p>
       <p>No system is 100% secure. If you believe your account has been compromised, change your password immediately from Account Settings or contact us.</p>
     </section>
 
     <section>
-      <h2><span class="num">10</span>Changes to This Policy</h2>
+      <h2>10. Changes to This Policy</h2>
       <p>If we make material changes to this policy, we will update the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
       <p>We will never change this policy in a way that reduces your rights without notifying you in the app first.</p>
     </section>
 
     <section>
-      <h2><span class="num">11</span>Contact</h2>
+      <h2>11. Contact</h2>
       <p>Questions, requests, or concerns about your privacy? Reach us at:</p>
-      <div class="highlight-box">
-        <p>📧 <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a></p>
+      <div>
+        <p><a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a></p>
       </div>
-      <p style="margin-top: 14px;">We aim to respond within 48 hours.</p>
+      <p>We reply as soon as we can.</p>
     </section>
 
   </main>
-
-  <footer>
-    <div class="brand">SakuraLog</div>
-    <div class="slogan">Made with love for anime lovers 🌸</div>
-  </footer>
-
+<footer>SakuraLog, an independent anime tracker. Contact: <a href="mailto:support.sakuralog@gmail.com">support.sakuralog@gmail.com</a></footer>
 </body>
 </html>
